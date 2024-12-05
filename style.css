@@ -173,3 +173,7 @@ p {
     margin: 35px; /* Ajoute de la marge autour du contenu principal */
   }
 }
+
+p:first-of-type {
+  margin-bottom: 1.5em; /* Augmente l'espace entre les deux phrases */
+}
