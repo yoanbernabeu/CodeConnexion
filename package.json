@@ -1,0 +1,13 @@
+{
+      "name": "code-connexion",
+      "version": "1.0.0",
+      "scripts": {
+        "dev": "vite"
+      },
+      "dependencies": {
+        "three": "^0.152.2"
+      },
+      "devDependencies": {
+        "vite": "^4.2.0"
+      }
+    }

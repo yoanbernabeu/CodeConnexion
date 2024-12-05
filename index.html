@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Connexion - Actus et découverte d'outils et technos</title>
+  <meta name="description" content="Code Connexion - Un mercredi sur deux, de 21h00 à 22h30. Actus et découverte d'outils et technos. Rejoignez-nous sur Twitch, YouTube, et Discord.">
+  <meta name="keywords" content="Code Connexion, technologie, outils, Twitch, YouTube, Discord, streaming, replay, membre">
+  <meta name="author" content="Yoan Devco">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="loading-screen">
+    <canvas id="noise-canvas"></canvas>
+    <div class="loading-text">Recherche des fréquences...</div>
+  </div>
+  <div id="threejs-container"></div>
+  <div class="container" id="main-content" style="opacity: 0;">
+    <h1>Code Connexion</h1>
+    <p>Un mercredi sur deux, de 21h00 à 22h30</p>
+    <p>Actus et découverte d'outils et technos</p>
+    <div class="links">
+      <a href="https://www.twitch.tv/yoandevco" target="_blank">Twitch</a>
+      <a href="https://www.youtube.com/@yoandevco/streams" target="_blank">YouTube Stream</a>
+      <a href="https://discord.gg/DJnmFzM96v" target="_blank">Discord</a>
+      <a href="https://youtube.com/playlist?list=PLxEJ5uJLOPDzqGHK9ZJaHiJKSqjnhvfJ2&si=FioPxZWdt0J4Amc0" target="_blank">Replay</a>
+      <a href="https://www.youtube.com/channel/UCRlsJWh1XwmNGxZPFgJ0Zlw/join" target="_blank">Devenir Membre</a>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      const mainContent = document.getElementById('main-content');
+      setTimeout(() => {
+        loadingScreen.style.transition = 'opacity 1s ease-out';
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+          mainContent.style.transition = 'opacity 1s ease-in';
+          mainContent.style.opacity = '1';
+        }, 1000); // Wait for the fade-out to complete
+      }, 3000); // Adjust the timeout as needed
+    });
+  </script>
+</body>
+</html>
